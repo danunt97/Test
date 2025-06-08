@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>Captured Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Captured Image</h1>
+    <div class="image-wrapper">
+        <img src="{{ url_for('static', filename=filename) }}" alt="Photo">
+    </div>
+    <p><a href="{{ url_for('index') }}">Back</a></p>
+</body>
+</html>

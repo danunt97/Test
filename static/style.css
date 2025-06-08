@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 2em;
+}
+button {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+}
+.gallery {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery li {
+    margin: 0.5em;
+}
+.gallery img {
+    width: 160px;
+    height: auto;
+}
+.image-wrapper img {
+    max-width: 80%;
+    height: auto;
+}

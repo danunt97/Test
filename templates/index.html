@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sony Photo Booth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sony Photo Booth</h1>
+    <div class="liveview-wrapper">
+        <img id="liveview" src="" alt="Live View">
+        <div id="countdown"></div>
+        <div id="flash"></div>
+    </div>
+    <form action="{{ url_for('capture') }}" method="post">
+        <button id="capture-btn" type="submit">Take Picture</button>
+    </form>
+
+    {% if images %}
+    <h2>Gallery</h2>
+    <ul class="gallery">
+        {% for img in images %}
+        <li>
+            <a href="{{ url_for('show_image', filename=img) }}">
+                <img src="{{ url_for('static', filename=img) }}" alt="{{ img }}">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

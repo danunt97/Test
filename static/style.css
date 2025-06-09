@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 2em;
+}
+button {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+}
+.gallery {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery li {
+    margin: 0.5em;
+}
+.gallery img {
+    width: 160px;
+    height: auto;
+}
+.image-wrapper img {
+    max-width: 80%;
+    height: auto;
+}
+
+.liveview-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#liveview {
+    width: 640px;
+    height: auto;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+
+#flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+#flash.show {
+    opacity: 1;
+}
